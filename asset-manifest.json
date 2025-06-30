@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/sakshi-makeup-studio-website/static/css/main.d4b48c80.css",
+    "main.js": "/sakshi-makeup-studio-website/static/js/main.a9c62ab6.js",
+    "static/media/slick.svg": "/sakshi-makeup-studio-website/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/sakshi-makeup-studio-website/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/sakshi-makeup-studio-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/sakshi-makeup-studio-website/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/sakshi-makeup-studio-website/index.html",
+    "main.d4b48c80.css.map": "/sakshi-makeup-studio-website/static/css/main.d4b48c80.css.map",
+    "main.a9c62ab6.js.map": "/sakshi-makeup-studio-website/static/js/main.a9c62ab6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4b48c80.css",
+    "static/js/main.a9c62ab6.js"
+  ]
+}
