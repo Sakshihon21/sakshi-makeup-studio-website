@@ -30,7 +30,7 @@ function Courses() {
       <h2>Our Courses</h2>
 
       <div className="course-image">
-        <img src="/images/course.jpg" alt="Makeup Courses" />
+        <img src={`${process.env.PUBLIC_URL}/images/course.jpg`} alt="Makeup Courses" />
       </div>
 
       <div className="courses-grid">

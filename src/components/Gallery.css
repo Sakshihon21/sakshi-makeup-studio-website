@@ -6,21 +6,20 @@
 .gallery-title {
   text-align: center;
   color: #c2185b;
-  margin: 50px 0 20px;
+  margin: 40px 0 20px;
   font-size: 32px;
-  font-weight: bold;
 }
 
 .slide-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 
 .slide-content img {
   width: 100%;
   max-width: 350px;
-  height: auto;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   object-fit: contain;

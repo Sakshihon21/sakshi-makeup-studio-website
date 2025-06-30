@@ -1,93 +1,79 @@
 import React from 'react';
 import './Gallery.css';
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 function Gallery() {
   const bridalImages = [
-    { src: '/images/Bridal1.jpg', title: 'Radiant Bridal Glow' },
-    { src: '/images/Bridal2.jpg', title: 'Traditional Bridal Look' },
-    { src: '/images/Bridal3.jpg', title: 'Royal Maharashtrian Bride' },
-    { src: '/images/Bridal4.jpg', title: 'Elegant Bridal Charm' },
-    { src: '/images/Bridal5.jpg', title: 'Glamorous Bridal Look' },
-    { src: '/images/Bridal6.jpg', title: 'Minimalist Bridal Beauty' },
+    { src: '/images/Bridal1.jpg', caption: 'Radiant Bridal Look' },
+    { src: '/images/Bridal2.jpg', caption: 'Elegant Bride Vibes' },
+    { src: '/images/Bridal3.jpg', caption: 'Timeless Bridal Glow' },
+    { src: '/images/Bridal4.jpg', caption: 'Classic Wedding Charm' },
+    { src: '/images/Bridal5.jpg', caption: 'Gorgeous Bride' },
+    { src: '/images/Bridal6.jpg', caption: 'Royal Bridal Beauty' },
   ];
 
   const hairImages = [
-    { src: '/images/Hairs1.jpg', title: 'Soft Curls' },
-    { src: '/images/Hairs2.jpg', title: 'Classic Waves' },
-    { src: '/images/Hairs3.jpg', title: 'Modern Braids' },
-    { src: '/images/Hairs4.jpg', title: 'Elegance of Tradition' },
-    { src: '/images/Hairs5.jpg', title: 'Elegent Bun' },
-    { src: '/images/Hairs6.jpg', title: 'Traditional Hairdo' },
+    { src: '/images/Hairs1.jpg', caption: 'Soft Curls' },
+    { src: '/images/Hairs2.jpg', caption: 'Classic Waves' },
+    { src: '/images/Hairs3.jpg', caption: 'Modern Briads' },
+    { src: '/images/Hairs4.jpg', caption: 'Traditional Hairdo' },
+    { src: '/images/Hairs5.jpg', caption: 'Elegent Bun' },
+    { src: '/images/Hairs6.jpg', caption: 'Bridal Floral Bun' },
   ];
 
   const siderImages = [
-    { src: '/images/Sider1.jpg', title: 'Glam Sider Look' },
-    { src: '/images/Sider2.jpg', title: 'Elegant Sider Style' },
-    { src: '/images/Sider3.jpg', title: 'Royal Sider Makeup' },
-    { src: '/images/Sider4.jpg', title: 'Soft Glam Sider' },
-    { src: '/images/Sider5.jpg', title: 'Minimal Sider Look' },
-    { src: '/images/Sider6.jpg', title: 'Classic Sider Charm' },
+    { src: '/images/Sider1.jpg', caption: 'Elegent Sider Look' },
+    { src: '/images/Sider2.jpg', caption: 'Glam Sider Look' },
+    { src: '/images/Sider3.jpg', caption: 'Royal Sider Glam' },
+    { src: '/images/Sider4.jpg', caption: 'Classic Look' },
+    { src: '/images/Sider5.jpg', caption: 'Soft Glam Look' },
+    { src: '/images/Sider6.jpg', caption: 'Minimal Sider Look' },
   ];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    pauseOnHover: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 600 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 600, min: 0 },
+      items: 1,
+    },
   };
+
+  const renderCarousel = (images, title) => (
+    <div className="gallery-section">
+      <h2 className="gallery-title">{title}</h2>
+      <Carousel
+        responsive={responsive}
+        autoPlay={true}
+        autoPlaySpeed={2000}
+        infinite={true}
+        keyBoardControl={true}
+        showDots={false}
+        arrows={true}
+      >
+        {images.map((item, index) => (
+          <div className="slide-content" key={index}>
+            <img src={process.env.PUBLIC_URL + item.src} alt={item.caption} />
+            <p>{item.caption}</p>
+          </div>
+        ))}
+      </Carousel>
+    </div>
+  );
 
   return (
     <div className="gallery-page">
-
-      {/* Bridal Look Section */}
-      <h2 className="gallery-title">Bridal Look</h2>
-      <Slider {...settings}>
-        {bridalImages.map((item, index) => (
-          <div className="slide-content" key={index}>
-            <img src={item.src} alt={item.title} />
-            <p>{item.title}</p>
-          </div>
-        ))}
-      </Slider>
-
-      {/* Hair Styles Section */}
-      <h2 className="gallery-title">Hair Styles Collection</h2>
-      <Slider {...settings}>
-        {hairImages.map((item, index) => (
-          <div className="slide-content" key={index}>
-            <img src={item.src} alt={item.title} />
-            <p>{item.title}</p>
-          </div>
-        ))}
-      </Slider>
-
-      {/* Sider Look Section */}
-      <h2 className="gallery-title">Sider Looks Collection</h2>
-      <Slider {...settings}>
-        {siderImages.map((item, index) => (
-          <div className="slide-content" key={index}>
-            <img src={item.src} alt={item.title} />
-            <p>{item.title}</p>
-          </div>
-        ))}
-      </Slider>
+      {renderCarousel(bridalImages, '✨Bridal Look')}
+      {renderCarousel(hairImages, '💇‍♀️ Hairstyles Collection')}
+      {renderCarousel(siderImages, '💖 Special Occasion Looks')}
     </div>
   );
 }

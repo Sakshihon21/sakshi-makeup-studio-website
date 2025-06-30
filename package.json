@@ -1,28 +1,25 @@
 {
-  "name": "makeupstudio",
-  "version": "0.1.0",
+  "name": "sakshi-makeup-studio-website",
+  "version": "1.0.0",
   "private": true,
+  "homepage": "https://Sakshihon21.github.io/sakshi-makeup-studio-website",
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-image-gallery": "^1.4.0",
-    "react-multi-carousel": "^2.8.6",
-    "react-router-dom": "^7.6.3",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^11.2.10",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

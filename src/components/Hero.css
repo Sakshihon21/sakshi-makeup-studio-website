@@ -1,55 +1,60 @@
-/* Hero Section Styles */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* ✅ Center items to remove space */
-  gap: 50px; /* ✅ Adds space between text and image */
+  background-color: #ffe4ec;
   padding: 40px 20px;
-  background-color: #fff0f5;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .hero-text {
-  max-width: 500px;
+  flex: 1;
+  min-width: 300px;
 }
 
 .hero-text h1 {
   color: #c2185b;
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 10px;
 }
 
-.hero-text h2 {
-  color: #e91e63;
-  margin-bottom: 15px;
-  font-size: 24px;
+.hero-text h3 {
+  color: #d81b60;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .hero-text p {
-  margin-bottom: 20px;
-  font-size: 18px;
+  color: #333;
+  font-size: 16px;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
 }
 
 .hero-image img {
-  width: 320px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-/* ✅ Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
-  .hero {
+  .hero-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-text {
-    max-width: 90%;
-  }
-
-  .hero-image img {
-    width: 250px;
+  .hero-image {
     margin-top: 20px;
   }
 }
