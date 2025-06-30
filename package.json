@@ -2,15 +2,12 @@
   "name": "sakshi-makeup-studio-website",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Sakshihon21.github.io/sakshi-makeup-studio-website",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-multi-carousel": "^2.8.6",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "react-multi-carousel": "^2.8.2",   <-- ✅ This line should be there
-
+    "react-multi-carousel": "^2.9.5",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -19,10 +16,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
