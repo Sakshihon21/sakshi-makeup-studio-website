@@ -1,0 +1,55 @@
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✅ Center items to remove space */
+  gap: 50px; /* ✅ Adds space between text and image */
+  padding: 40px 20px;
+  background-color: #fff0f5;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  color: #c2185b;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  color: #e91e63;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.hero-image img {
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 90%;
+  }
+
+  .hero-image img {
+    width: 250px;
+    margin-top: 20px;
+  }
+}

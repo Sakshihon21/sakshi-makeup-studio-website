@@ -1,0 +1,90 @@
+.appointment {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffe4ec, #fff0f5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment-container {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.appointment h2 {
+  color: #c2185b;
+  margin-bottom: 25px;
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.appointment h2::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #c2185b;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 12px 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #c2185b;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.email-btn {
+  background-color: #c2185b;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}

@@ -1,0 +1,56 @@
+.reviews {
+  padding: 40px;
+  background-color: #fff0f5;
+}
+
+.reviews h2 {
+  text-align: center;
+  color: #c2185b;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffeef5;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #c2185b;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #c2185b;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #a3154b;
+}
