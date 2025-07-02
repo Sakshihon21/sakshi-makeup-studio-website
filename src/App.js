@@ -4,8 +4,9 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Footer from './components/Footer';
+import BeautifulLooks from './components/BeautifulLooks'; // ✅ Added
 
+import Footer from './components/Footer';
 import Courses from './components/Courses';
 import Gallery from './components/Gallery';
 import Appointment from './components/Appointment';
@@ -18,7 +19,15 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <BeautifulLooks /> {/* ✅ Added Beautiful Looks below Hero */}
+            </>
+          }
+        />
         <Route path="/courses" element={<Courses />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/appointment" element={<Appointment />} />
